@@ -211,3 +211,15 @@ body {
 
 @media screen and (max-width: 576) {
 }
+
+.excalidraw {
+	filter: invert(100%) hue-rotate(180deg);
+}
+  
+.board{
+	height: 100%;
+}
+
+.board div{
+	border-radius: 17px;
+}
