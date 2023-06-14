@@ -1,79 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link to Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Conference</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="header">
-        <div class="d-flex align-items-center">
-            <div class="camera-icon">
-                <i class="fas fa-camera" style="color: white;"></i>
-            </div>
-            <h4 class="text-white ml-2">Conference</h4>
-        </div>
-        <div class="d-flex align-items-center">
-            <input type="text" class="search-box mr-2" placeholder="Search...">
-            <div class="profile-pic"></div>
-        </div>
-    </div>
-    <div class="separator"></div>
-    <div class="d-flex boxs">
-        <div class="left-box d-flex">
-            <div class="d-flex flex-wrap small-boxs">
-                <div class="small-box">
-                    <img src="img/images.jpg" alt="" class="user-photo">
-                </div>
-                <div class="small-box">
-                    <img src="img/images.jpg" alt="" class="user-photo">
-                </div>
-                <div class="small-box">
-                    <img src="img/images.jpg" alt="" class="user-photo">
-                </div>
-                <div class="small-box">
-                    <img src="img/images.jpg" alt="" class="user-photo">
-                </div>
-                <div class="small-box">
-                    <img src="img/images.jpg" alt="" class="user-photo">
-                </div>
-                <div class="small-box">
-                    <img src="img/images.jpg" alt="" class="user-photo">
-                </div>
-             </div>
-             <div class="big-box"></div>
-        </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<!-- Link to Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
 
-
-        <div class="right-box">
-            <div id="chat-box">
-              <div class="message">
-                <div class="message-header">
-                  <div class="author">Jane Doe</div>
-                  <div class="date">June 9, 2023</div>
-                </div>
-                <div class="message-body">
-                  <p>Hello there, this is a test message!</p>
-                </div>
-              </div>
-            </div>
-            <form id="send-message-form">
-                <div class="input-container">
-                    <input type="text" id="message-input" placeholder="Enter message...">
-                    <button type="submit"> sned <i class="fas fa-paper-plane"></i></button>
-                </div>
-              </form>
-          </div>
-
-
-    </div>
-    <!-- Link to JQuery and Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+		<title>Conference</title>
+		<link
+			rel="stylesheet"
+			href="style.css"
+		/>
+	</head>
+	<body>
+		<div class="container-fluid h-100">
+			<!-- Header start -->
+			<div class="header">
+				<!-- Header LeftSide -->
+				<div class="d-flex align-items-center w-100">
+					<div class="camera-icon">
+						<i
+							class="fas fa-camera"
+							style="color: white"
+						></i>
+					</div>
+					<h4 class="text-white ml-2">Conference</h4>
+				</div>
+				<!-- Header RightSide -->
+				<div class="d-flex align-items-center w-100 justify-content-end">
+					<input
+						type="text"
+						class="search-box mr-2 d-none d-md-block"
+						placeholder="Search..."
+					/>
+					<div class="profile-pic"></div>
+				</div>
+			</div>
+			<div class="separator"></div>
+			<!-- Header end -->
+			<!-- Box start -->
+			<div class="d-flex boxes">
+				<!-- Box LeftSide -->
+				<div
+					class="left-box d-flex flex-column justify-content-md-start col col-md-9 py-3"
+				>
+					<!-- BoxHeader -->
+					<div class="d-flex flex-row h-25 small-boxes py-0">
+						<div class="small-box">
+							<img
+								src="img/images.jpg"
+								alt=""
+								class="user-photo"
+							/>
+						</div>
+						<div class="small-box">
+							<img
+								src="img/images.jpg"
+								alt=""
+								class="user-photo"
+							/>
+						</div>
+						<div class="small-box">
+							<img
+								src="img/images.jpg"
+								alt=""
+								class="user-photo"
+							/>
+						</div>
+						<div class="small-box">
+							<img
+								src="img/images.jpg"
+								alt=""
+								class="user-photo"
+							/>
+						</div>
+						<div class="small-box">
+							<img
+								src="img/images.jpg"
+								alt=""
+								class="user-photo"
+							/>
+						</div>
+						<div class="small-box">
+							<img
+								src="img/images.jpg"
+								alt=""
+								class="user-photo"
+							/>
+						</div>
+					</div>
+					<!-- BoxMasterView -->
+					<div class="big-box w-100 h-75"></div>
+				</div>
+				<!-- Box RightSide -->
+				<div class="d-none d-md-flex right-box col-3 ml-2">
+					<div id="chat-box">
+						<div class="message">
+							<div class="message-header">
+								<div class="author">Jane Doe</div>
+								<div class="date">June 9, 2023</div>
+							</div>
+							<div class="message-body">
+								<p>Hello there, this is a test message!</p>
+							</div>
+						</div>
+					</div>
+					<form id="send-message-form">
+						<div class="input-container">
+							<input
+								type="text"
+								id="message-input"
+								placeholder="Enter message..."
+							/>
+							<button type="submit">
+								sned <i class="fas fa-paper-plane"></i>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Link to JQuery and Bootstrap JS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	</body>
 </html>
