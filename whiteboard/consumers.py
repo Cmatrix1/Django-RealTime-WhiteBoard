@@ -6,7 +6,6 @@ from channels.generic.websocket import AsyncWebsocketConsumer
 class BoardConsumer(AsyncWebsocketConsumer):
     async def connect(self):
         await self.channel_layer.group_add("board_updates", self.channel_name)
-        print("Accept The Connection !!!")
         await self.accept()
 
     async def disconnect(self, close_code):
@@ -26,3 +25,6 @@ class BoardConsumer(AsyncWebsocketConsumer):
     async def broadcast_message(self, event):
         if self.channel_name != event["sender_channel_name"]:
             await self.send(text_data=json.dumps(event["data"]))
+
+
+
