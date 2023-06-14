@@ -64,7 +64,7 @@ body {
 	flex-grow: 1;
 	flex-wrap: wrap;
 	width: calc(75% - 10px); /* subtracting margin */
-	background-color: var(--primary-light);
+	background-color: var(--primary);
 	border-radius: 10px;
 	/* margin-right: 20px; */
 }
@@ -92,21 +92,22 @@ body {
 }
 
 .boxes {
-	padding: 1rem;
 	display: flex;
 	overflow: hidden;
 	height: calc(90% - 20px);
 }
 
 .small-box {
-	margin-right: 0.2rem;
+	background-color: var(--primary-light);
+	margin-right: 0.4rem;
 	min-width: 10rem;
-	height: auto;
+	overflow: hidden;
+	max-height: 100%;
 	border-radius: 10px;
 }
 
 .big-box {
-	background-color: var(--primary);
+	background-color: var(--primary-light);
 	border-radius: 10px;
 	height: clamp(10rem, 70%, 100%);
 	align-self: flex-end;
@@ -124,9 +125,9 @@ body {
 
 .user-photo {
 	border-radius: 10px;
-	top: 0;
-	left: 0;
 	width: 100%;
+	height: auto;
+	margin: 0px auto;
 	object-fit: cover;
 }
 
@@ -209,17 +210,20 @@ body {
 	margin-top: 20px;
 }
 
+.button {
+	border-radius: 0.5rem;
+	padding: 0.5rem 1rem;
+	background-color: var(--primary-light);
+	color: var(--white);
+	cursor: pointer;
+}
+.button.icon {
+	font-size: 1.2rem;
+	min-width: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 @media screen and (max-width: 576) {
-}
-
-.excalidraw {
-	filter: invert(100%) hue-rotate(180deg);
-}
-  
-.board{
-	height: 100%;
-}
-
-.board div{
-	border-radius: 17px;
 }
