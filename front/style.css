@@ -232,19 +232,36 @@ body {
 	filter: invert(100%) hue-rotate(180deg);
 }
 
-.board{
+.board {
 	height: 100%;
 }
 
-.board div{
+.board div {
 	border-radius: 17px;
 }
 
-.copy-button span{
+.copy-button span {
 	padding-right: 7px;
 	border-right: 1px solid rgb(149, 149, 149);
 }
 
-.copy-button i{
+.copy-button i {
 	padding-left: 3px;
+}
+
+::-webkit-scrollbar {
+	width: 0.3rem;
+	border-radius: 3rem;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--primary-light);
 }
