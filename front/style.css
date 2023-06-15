@@ -133,6 +133,7 @@ body {
 
 #chat-box {
 	width: 100%;
+	overflow: auto;
 }
 
 .message {
