@@ -5,6 +5,7 @@
 	--accent-dark: oklch(43.2% 0.23 271.06);
 	--gray: oklch(69.3% 0.006 301.06);
 	--white: oklch(89.2% 0.006 301.06);
+	--user-message: #3d3f41
 }
 
 body {
@@ -114,7 +115,7 @@ body {
 }
 
 .small-boxes {
-	padding: 1rem;
+	padding-bottom: 1rem;
 	flex-wrap: nowrap;
 	width: 100%;
 	height: 20%;
@@ -134,16 +135,20 @@ body {
 #chat-box {
 	width: 100%;
 	overflow: auto;
+	margin-top: 20px;
+	padding-right: 20px;
+	display: flex;
+	flex-direction: inherit;
 }
 
 .message {
 	padding: 10px;
-	border-radius: 8px 8px 8px 1px;
+	border-radius: 8px 8px 8px 0px;
 	margin-bottom: 10px;
 	background-color: var(--primary);
 	color: var(--white);
-	width: 80%;
-	margin-left: 17px;
+	width: fit-content;
+	margin-right: 20px;
 }
 
 .message-header {
@@ -165,6 +170,20 @@ body {
 .message-body {
 	font-size: 0.9rem;
 }
+
+.user-message {
+	padding: 10px;
+	border-radius: 8px 8px 0px 8px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-right: 1px;
+	background-color: var(--user-message);
+	color: var(--white);
+	width: fit-content;
+	float: right;
+	align-self: end;
+  }
+
 .input-container {
 	display: flex;
 	align-items: center;
@@ -203,13 +222,11 @@ body {
 }
 
 #send-message-form {
+	padding-top: 10px;
 	margin-bottom: 1rem;
 	width: 100%;
 }
 
-#chat-box {
-	margin-top: 20px;
-}
 
 .button {
 	border-radius: 0.5rem;

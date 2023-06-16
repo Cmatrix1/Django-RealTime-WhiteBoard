@@ -1,253 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			http-equiv="X-UA-Compatible"
-			content="IE=edge"
-		/>
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
-		<!-- Link to Bootstrap CSS -->
-		<link
-			rel="stylesheet"
-			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-		/>
 
-		<title>Conference</title>
-		<link
-			rel="stylesheet"
-			href="style.css"
-		/>
-		<!-- Link to Fontawesome -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-	</head>
-	<body>
-		<div class="container-fluid h-100">
-			<!-- Header start -->
-			<div class="header">
-				<!-- Header LeftSide -->
-				<div class="d-flex align-items-center w-100">
-					<div class="camera-icon">
-						<i
-							class="fas fa-camera"
-							style="color: white"
-						></i>
-					</div>
-					<h4 class="text-white ml-2">Conference</h4>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Link to Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+	<title>Conference</title>
+	<link rel="stylesheet" href="style.css" />
+	<!-- Link to Fontawesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+	<div class="container-fluid h-100">
+		<!-- Header start -->
+		<div class="header">
+			<!-- Header LeftSide -->
+			<div class="d-flex align-items-center w-100">
+				<div class="camera-icon">
+					<i class="fas fa-camera" style="color: white"></i>
 				</div>
-				<!-- Header RightSide -->
-				<div class="d-flex align-items-center w-100 justify-content-end">
-					<input
-						type="text"
-						class="search-box mr-2 d-none d-md-block"
-						placeholder="Search..."
-					/>
-					<div class="profile-pic"></div>
-				</div>
+				<h4 class="text-white ml-2">Conference</h4>
 			</div>
-			<div class="separator"></div>
-			<!-- Header end  -->
-			<!-- Box start -->
-			<div class="d-flex boxes">
-				<!-- Box LeftSide -->
-				<div
-					class="left-box d-flex flex-column justify-content-md-between col col-md-9 py-3"
-				>
-					<!-- BoxHeader -->
-					<div class="d-flex flex-row small-boxes py-0">
-						<div class="small-box">
-							<img
-								src="img/images.jpg"
-								alt=""
-								class="user-photo"
-							/>
-						</div>
-						<div class="small-box">
-							<img
-								src="img/images.jpg"
-								alt=""
-								class="user-photo"
-							/>
-						</div>
-						<div class="small-box">
-							<img
-								src="img/images.jpg"
-								alt=""
-								class="user-photo"
-							/>
-						</div>
-						<div class="small-box">
-							<img
-								src="img/images.jpg"
-								alt=""
-								class="user-photo"
-							/>
-						</div>
-						<div class="small-box">
-							<img
-								src="img/images.jpg"
-								alt=""
-								class="user-photo"
-							/>
-						</div>
-						<div class="small-box">
-							<img
-								src="img/images.jpg"
-								alt=""
-								class="user-photo"
-							/>
-						</div>
-					</div>
-					<!-- BoxMasterView -->
-					<div class="big-box w-100">
-						<div
-							class="board"
-							id="app"
-						></div>
-					</div>
-					<!-- Buttons start -->
-					<div class="d-flex flex-row w-100">
-						<!-- Buttons LeftSide -->
-						<div class="col w-100 d-flex justify-content-start pt-2">
-							<div class="copy-button button">
-								<span>QS7-ZYT-SR6</span>
-								<i class="fas fa-light fa-clone"></i>
-							</div>
-						</div>
-						<!-- Buttons MiddleSide -->
-						<div class="col w-100 pt-2 d-flex justify-content-center">
-							<div class="button icon mx-1 bg-danger">
-								<i class="fas fa-duotone fa-microphone-slash"></i>
-							</div>
-							<div class="button icon mx-1">
-								<i class="fas fa-duotone fa-video"></i>
-							</div>
-							<div class="button icon mx-1">
-								<i class="fas fa-duotone fa-cloud-upload"></i>
-							</div>
-							<div class="button icon mx-1 bg-primary">
-								<i class="fas fa-duotone fa-closed-captioning"></i>
-							</div>
-							<div class="button icon mx-1">
-								<i class="fas fa-duotone fa-cloud-download"></i>
-							</div>
-							<div class="button icon mx-1">
-								<i class="fas fa-duotone fa-ellipsis"></i>
-							</div>
-						</div>
-						<!-- Buttons RightSide -->
-						<div class="col pt-1 w-100 d-flex justify-content-end">
-							<div class="button icon bg-danger leave-btn">Leave Meet</div>
-						</div>
-					</div>
-				</div>
-				<!-- Box RightSide -->
-				<div class="d-none d-md-flex right-box col-3 ml-2">
-					<div id="chat-box">
-						<div class="message">
-							<div class="message-header">
-								<div class="author">Jane Doe</div>
-								<div class="date">June 9, 2023</div>
-							</div>
-							<div class="message-body">
-								<p>Hello there, this is a test message!</p>
-							</div>
-						</div>
-						<div class="message">
-							<div class="message-header">
-								<div class="author">Jane Doe</div>
-								<div class="date">June 9, 2023</div>
-							</div>
-							<div class="message-body">
-								<p>Hello there, this is a test message!</p>
-							</div>
-						</div>
-						<div class="message">
-							<div class="message-header">
-								<div class="author">Jane Doe</div>
-								<div class="date">June 9, 2023</div>
-							</div>
-							<div class="message-body">
-								<p>Hello there, this is a test message!</p>
-							</div>
-						</div>
-						<div class="message">
-							<div class="message-header">
-								<div class="author">Jane Doe</div>
-								<div class="date">June 9, 2023</div>
-							</div>
-							<div class="message-body">
-								<p>Hello there, this is a test message!</p>
-							</div>
-						</div>
-						<div class="message">
-							<div class="message-header">
-								<div class="author">Jane Doe</div>
-								<div class="date">June 9, 2023</div>
-							</div>
-							<div class="message-body">
-								<p>Hello there, this is a test message!</p>
-							</div>
-						</div>
-						<div class="message">
-							<div class="message-header">
-								<div class="author">Jane Doe</div>
-								<div class="date">June 9, 2023</div>
-							</div>
-							<div class="message-body">
-								<p>Hello there, this is a test message!</p>
-							</div>
-						</div>
-						<div class="message">
-							<div class="message-header">
-								<div class="author">Jane Doe</div>
-								<div class="date">June 9, 2023</div>
-							</div>
-							<div class="message-body">
-								<p>Hello there, this is a test message!</p>
-							</div>
-						</div>
-					</div>
-					<form id="send-message-form">
-						<div class="input-container">
-							<input
-								type="text"
-								id="message-input"
-								placeholder="Enter message..."
-							/>
-							<button type="submit">
-								<i class="fas fa-paper-plane"></i> send
-							</button>
-						</div>
-					</form>
-				</div>
+			<!-- Header RightSide -->
+			<div class="d-flex align-items-center w-100 justify-content-end">
+				<input type="text" class="search-box mr-2 d-none d-md-block" placeholder="Search..." />
+				<div class="profile-pic"></div>
 			</div>
-			<!-- Box end -->
 		</div>
+		<div class="separator"></div>
+		<!-- Header end  -->
+		<!-- Box start -->
+		<div class="d-flex boxes">
+			<!-- Box LeftSide -->
+			<div class="left-box d-flex flex-column justify-content-md-between col col-md-9 py-3">
+				<!-- BoxHeader -->
+				<div class="d-flex flex-row small-boxes py-0">
+					<div class="small-box">
+						<img src="img/images.jpg" alt="" class="user-photo" />
+					</div>
+					<div class="small-box">
+						<img src="img/images.jpg" alt="" class="user-photo" />
+					</div>
+					<div class="small-box">
+						<img src="img/images.jpg" alt="" class="user-photo" />
+					</div>
+					<div class="small-box">
+						<img src="img/images.jpg" alt="" class="user-photo" />
+					</div>
+					<div class="small-box">
+						<img src="img/images.jpg" alt="" class="user-photo" />
+					</div>
 
-		<!-- Link to React and Excalidraw -->
-		<script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
-		<script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
-		<script
-			type="text/javascript"
-			src="https://unpkg.com/@excalidraw/excalidraw/dist/excalidraw.development.js"
-		></script>
+				</div>
+				<!-- BoxMasterView -->
+				<div class="big-box w-100">
+					<div class="board" id="app"></div>
+				</div>
+				<!-- Buttons start -->
+				<div class="d-flex flex-row w-100">
+					<!-- Buttons LeftSide -->
+					<div class="col w-100 d-flex justify-content-start pt-2">
+						<div class="copy-button button">
+							<span>QS7-ZYT-SR6</span>
+							<i class="fas fa-light fa-clone"></i>
+						</div>
+					</div>
+					<!-- Buttons MiddleSide -->
+					<div class="col w-100 pt-2 d-flex justify-content-center">
+						<div class="button icon mx-1 bg-danger">
+							<i class="fas fa-duotone fa-microphone-slash"></i>
+						</div>
+						<div class="button icon mx-1">
+							<i class="fas fa-duotone fa-video"></i>
+						</div>
+						<div class="button icon mx-1">
+							<i class="fas fa-duotone fa-cloud-upload"></i>
+						</div>
+						<div class="button icon mx-1 bg-primary">
+							<i class="fas fa-duotone fa-closed-captioning"></i>
+						</div>
+						<div class="button icon mx-1">
+							<i class="fas fa-duotone fa-cloud-download"></i>
+						</div>
+						<div class="button icon mx-1">
+							<i class="fas fa-duotone fa-ellipsis"></i>
+						</div>
+					</div>
+					<!-- Buttons RightSide -->
+					<div class="col pt-1 w-100 d-flex justify-content-end">
+						<div class="button icon bg-danger leave-btn">Leave Meet</div>
+					</div>
+				</div>
+			</div>
+			<!-- Box RightSide -->
+			<div class="d-none d-md-flex right-box col-3 ml-2">
+				<div id="chat-box">
+					<div class="message">
+						<div class="message-header">
+							<div class="author">Sadegh</div>
+							<div class="date">June 14, 2023</div>
+						</div>
+						<div class="message-body small">
+							<p>Hey, have you worked with Python before?</p>
+						</div>
+					</div>
+				
+					<div class="message">
+						<div class="message-header">
+							<div class="author">Sadegh</div>
+							<div class="date">June 14, 2023</div>
+						</div>
+						<div class="message-body small">
+							<p>Have you ever used any web frameworks with Python?</p>
+						</div>
+					</div>
+				
+					<div class="user-message">
+						<div class="message-header">
+							<div class="author">Dev Ess</div>
+							<div class="date">June 14, 2023</div>
+						</div>
+						<div class="message-body small">
+							<p>Yes, I've worked with several web frameworks in Python, including Django.</p>
+						</div>
+					</div>
+				
+					<div class="message">
+						<div class="message-header">
+							<div class="author">Sadegh</div>
+							<div class="date">June 14, 2023</div>
+						</div>
+						<div class="message-body small">
+							<p>Oh cool! How would you describe Django?</p>
+						</div>
+					</div>
+				
+					<div class="user-message">
+						<div class="message-header">
+							<div class="author">Dev Ess</div>
+							<div class="date">June 14, 2023</div>
+						</div>
+						<div class="message-body small">
+							<p>Django is a high-level Python web framework that follows the model-view-controller (MVC) architectural pattern. It provides many built-in features for handling common web development tasks, such as authentication, URL routing, and database access.</p>
+						</div>
+					</div>
+				
+					<div class="message">
+						<div class="message-header">
+							<div class="author">Sadegh</div>
+							<div class="date">June 14, 2023</div>
+						</div>
+						<div class="message-body small">
+							<p>Interesting! What are some advantages of using Django over other web frameworks in Python?</p>
+						</div>
+					</div>
+				
+					<div class="user-message">
+						<div class="message-header">
+							<div class="author">Dev Ess</div>
+							<div class="date">June 14, 2023</div>
+						</div>
+						<div class="message-body small">
+							<p>One advantage of Django is its built-in admin interface, which allows for easy management of database records. Additionally, it has a large and supportive community, with many third-party packages available for extending its functionality. Finally, Django's emphasis on "batteries included" means that it comes with many features out-of-the-box, making it a good choice for rapid development.</p>
+						</div>
+					</div>
+				
+					<div class="message">
+						<div class="message-header">
+							<div class="author">Sadegh</div>
+							<div class="date">June 14, 2023</div>
+						</div>
+						<div class="message-body small">
+							<p>Thanks for the information! I might consider using Django for my next project.</p>
+						</div>
+					</div>
+				
+					<div class="user-message">
+						<div class="message-header">
+							<div class="author">Dev Ess</div>
+							<div class="date">June 14, 2023</div>
+						</div>
+						<div class="message-body small">
+							<p>You're welcome!</p>
+						</div>
+					</div>
+				</div>
+				
 
-		<!-- Link to JQuery and Bootstrap JS -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-		<!-- Link to Script Js -->
-		<script src="script.js"></script>
-	</body>
+				<form id="send-message-form">
+					<div class="input-container">
+						<input type="text" id="message-input" placeholder="Enter message..." />
+						<button type="submit">
+							<i class="fas fa-paper-plane pl-3 pr-3"></i>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- Box end -->
+	</div>
+
+	<!-- Link to React and Excalidraw -->
+	<script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+	<script type="text/javascript"
+		src="https://unpkg.com/@excalidraw/excalidraw/dist/excalidraw.development.js"></script>
+
+	<!-- Link to JQuery and Bootstrap JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<!-- Link to Script Js -->
+	<script src="script.js"></script>
+</body>
+
 </html>
