@@ -1,0 +1,12 @@
+js tasks:
+method for add message when user click on send btn in chatbox
+method for copy the page link when user click on copy btn 
+
+
+style tasks:
+the small-box should be 5 in page
+the color of page should be like photo
+the font of leave and copy btns should be smaller
+The buttons and small boxes and the board should all be aligned from the right and left sides
+message from user and another users should have diffrent style
+   

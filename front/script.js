@@ -15,3 +15,8 @@ const App = () => {
 const excalidrawWrapper = document.getElementById("app");
 const root = ReactDOM.createRoot(excalidrawWrapper);
 root.render(React.createElement(App));
+
+
+
+// Buttons Events
+$(".leave-btn").click(() => window.location = "/" );
