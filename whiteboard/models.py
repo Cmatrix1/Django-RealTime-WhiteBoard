@@ -38,3 +38,9 @@ class Message(models.Model):
 
     def __str__(self):
         return "{} - {}: {}".format(self.sender.name, self.room.name, self.content[:50])
+
+
+class ImageBoard(models.Model):
+    room = models.ForeignKey(ConferenceRoom, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to="media/board")
+    
