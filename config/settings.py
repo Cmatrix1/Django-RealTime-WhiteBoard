@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'daphne',
+    'rest_framework',
+
     'whiteboard',
 
     'django.contrib.admin',
