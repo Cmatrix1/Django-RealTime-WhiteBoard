@@ -1,11 +1,12 @@
 :root {
 	--primary: oklch(23% 0.006 301.06);
+	--primary-60: oklch(23% 0.006 301.06 / 60%);
 	--primary-light: oklch(26.3% 0.006 301.06);
 	--accent: oklch(54.2% 0.23 271.06);
 	--accent-dark: oklch(43.2% 0.23 271.06);
 	--gray: oklch(69.3% 0.006 301.06);
 	--white: oklch(89.2% 0.006 301.06);
-	--user-message: #3d3f41
+	--user-message: #3d3f41;
 }
 
 body {
@@ -107,8 +108,22 @@ body {
 	border-radius: 10px;
 }
 
-.user-img{
+.user-img {
 	border: 4px solid #3d8cfd;
+}
+
+.usr-img-bottom {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: var(--primary-60);
+	color: var(--white);
+	display: flex;
+	flex-direction: row;
+	padding: 0px 0.5rem;
+}
+.usr-img-bottom i:first-of-type {
+	cursor: pointer;
 }
 
 .big-box {
@@ -186,7 +201,7 @@ body {
 	width: fit-content;
 	float: right;
 	align-self: end;
-  }
+}
 
 .input-container {
 	display: flex;
@@ -230,7 +245,6 @@ body {
 	margin-bottom: 1rem;
 	width: 100%;
 }
-
 
 .button {
 	border-radius: 0.5rem;
