@@ -305,7 +305,7 @@ body {
 
 @media screen and (max-width: 576px) {
 	.fab {
-		display: flex;
+		display: flex !important;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: space-between;
