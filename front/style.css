@@ -18,6 +18,19 @@ body {
 	font-size: 16px;
 }
 
+.preload {
+	position: absolute;
+	z-index: 10;
+	background: var(--primary-60);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(11.5px);
+	-webkit-backdrop-filter: blur(11.5px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	width: 100vw;
+	height: 100vh;
+}
+
 .header {
 	padding-top: 1rem;
 	display: flex;

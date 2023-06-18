@@ -1,5 +1,6 @@
 $(() => {
 	const w = $('body').width()
+	$('.preload').fadeOut(1000)
 	if (w < 576) {
 		$('#rightBox').hide()
 		$('#rightBox').css({
