@@ -6,7 +6,7 @@
 	--accent-dark: oklch(43.2% 0.23 271.06);
 	--gray: oklch(69.3% 0.006 301.06);
 	--white: oklch(89.2% 0.006 301.06);
-	--user-message: #3d3f41;
+	--user-message: oklch(35.9% 0.006 301.06);
 }
 
 body {
@@ -261,9 +261,6 @@ body {
 	align-items: center;
 }
 
-@media screen and (max-width: 576) {
-}
-
 .excalidraw {
 	filter: invert(100%) hue-rotate(180deg);
 }
@@ -300,4 +297,39 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
 	background: var(--primary-light);
+}
+
+.fab {
+	display: none;
+}
+
+@media screen and (max-width: 576px) {
+	.fab {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: auto;
+		padding: 1rem 1.5rem;
+	}
+
+	.fab-btns i {
+		font-size: 1rem;
+		color: var(--white);
+		background-color: var(--primary-light);
+		border-radius: 5rem;
+		padding: 1rem;
+	}
+
+	.fab-chat i {
+		font-size: 1rem;
+		color: var(--white);
+		background-color: var(--primary-light);
+		border-radius: 5rem;
+		padding: 1rem;
+	}
 }
