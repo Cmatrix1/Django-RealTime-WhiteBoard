@@ -63,6 +63,7 @@
 			<div class="d-flex boxes">
 				<!-- Box LeftSide -->
 				<div
+					id="leftBox"
 					class="left-box d-flex flex-column justify-content-md-between col col-md-9 py-3"
 				>
 					<!-- BoxHeader -->
@@ -177,7 +178,10 @@
 					</div>
 				</div>
 				<!-- Box RightSide -->
-				<div class="d-none d-md-flex right-box col-3 ml-2 mt-3">
+				<div
+					id="rightBox"
+					class="d-md-flex right-box col col-md-3 ml-md-2 mt-md-3"
+				>
 					<div id="chat-box">
 						<div class="message">
 							<div class="message-header">
@@ -310,10 +314,16 @@
 			<!-- Box end -->
 			<!-- FAB start -->
 			<div class="fab">
-				<div class="fab-btns">
+				<div
+					id="fabMenu"
+					class="fab-menu"
+				>
 					<i class="fas fa-bars"></i>
 				</div>
-				<div class="fab-chat">
+				<div
+					id="fabChat"
+					class="fab-chat"
+				>
 					<i class="fa fa-comment"></i>
 				</div>
 			</div>
@@ -335,5 +345,8 @@
 
 		<!-- Link to Script Js -->
 		<script src="script.js"></script>
+
+		<!-- ChatButton and MenuButton Handler -->
+		<script src="handler.js"></script>
 	</body>
 </html>
