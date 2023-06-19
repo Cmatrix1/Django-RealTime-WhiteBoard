@@ -79,7 +79,7 @@
 								<div class="w-100 usr-img-bottom-btn">
 									<i class="fas fa-volume-up"></i>
 								</div>
-								<div class="w-100 text-right">Isabella</div>
+								<div class="w-100 text-right" id="username">Isabella</div>
 							</div>
 						</div>
 						<div class="small-box user-image position-relative">
@@ -184,95 +184,6 @@
 					class="d-md-flex right-box col col-md-3 ml-md-2 mt-md-3"
 				>
 					<div id="chat-box">
-						<div class="message">
-							<div class="message-header">
-								<div class="author">Sadegh</div>
-								<div class="date">June 14, 2023</div>
-							</div>
-							<div class="message-body small">
-								<p>Hey, have you worked with Python before?</p>
-							</div>
-						</div>
-
-						<div class="message">
-							<div class="message-header">
-								<div class="author">Sadegh</div>
-								<div class="date">June 14, 2023</div>
-							</div>
-							<div class="message-body small">
-								<p>Have you ever used any web frameworks with Python?</p>
-							</div>
-						</div>
-
-						<div class="user-message">
-							<div class="message-header">
-								<div class="author">Dev Ess</div>
-								<div class="date">June 14, 2023</div>
-							</div>
-							<div class="message-body small">
-								<p>
-									Yes, I've worked with several web frameworks in Python,
-									including Django.
-								</p>
-							</div>
-						</div>
-
-						<div class="message">
-							<div class="message-header">
-								<div class="author">Sadegh</div>
-								<div class="date">June 14, 2023</div>
-							</div>
-							<div class="message-body small">
-								<p>Oh cool! How would you describe Django?</p>
-							</div>
-						</div>
-
-						<div class="user-message">
-							<div class="message-header">
-								<div class="author">Dev Ess</div>
-								<div class="date">June 14, 2023</div>
-							</div>
-							<div class="message-body small">
-								<p>
-									Django is a high-level Python web framework that follows the
-									model-view-controller (MVC) architectural pattern. It provides
-									many built-in features for handling common web development
-									tasks, such as authentication, URL routing, and database
-									access.
-								</p>
-							</div>
-						</div>
-
-						<div class="message">
-							<div class="message-header">
-								<div class="author">Sadegh</div>
-								<div class="date">June 14, 2023</div>
-							</div>
-							<div class="message-body small">
-								<p>
-									Interesting! What are some advantages of using Django over
-									other web frameworks in Python?
-								</p>
-							</div>
-						</div>
-
-						<div class="user-message">
-							<div class="message-header">
-								<div class="author">Dev Ess</div>
-								<div class="date">June 14, 2023</div>
-							</div>
-							<div class="message-body small">
-								<p>
-									One advantage of Django is its built-in admin interface, which
-									allows for easy management of database records. Additionally,
-									it has a large and supportive community, with many third-party
-									packages available for extending its functionality. Finally,
-									Django's emphasis on "batteries included" means that it comes
-									with many features out-of-the-box, making it a good choice for
-									rapid development.
-								</p>
-							</div>
-						</div>
 
 						<div class="message">
 							<div class="message-header">
@@ -298,18 +209,18 @@
 						</div>
 					</div>
 
-					<form id="send-message-form">
+					<div id="send-message-form">
 						<div class="input-container">
 							<input
 								type="text"
 								id="message-input"
 								placeholder="Enter message..."
 							/>
-							<button type="submit">
+							<button id="send-msg-btn">
 								<i class="fas fa-paper-plane pl-3 pr-3"></i>
 							</button>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 			<!-- Box end -->
@@ -346,6 +257,8 @@
 
 		<!-- Link to Script Js -->
 		<script src="script.js"></script>
+		<script src="js/message/message.js"></script>
+		<script src="js/message/websocket.js"></script>
 
 		<!-- ChatButton and MenuButton Handler -->
 		<script src="handler.js"></script>

@@ -197,6 +197,7 @@ body {
 .date {
 	font-size: 0.8rem;
 	color: var(--gray);
+	margin-left: 20px;
 }
 
 .message-body {
