@@ -30,7 +30,7 @@ class BoardConsumer(AsyncWebsocketConsumer):
 
 
 
-class ConferenceRoomConsumer(AsyncWebsocketConsumer):
+class MessageConsumer(AsyncWebsocketConsumer):
     async def connect(self):
         self.room_name = self.scope['url_route']['kwargs']['slug']
         self.room_group_name = f'chat_{self.room_name}'
@@ -71,6 +71,8 @@ class ConferenceRoomConsumer(AsyncWebsocketConsumer):
             'username': event['username']
         }))
 
+
+    # Write method for validation of sender name
 
     @database_sync_to_async
     def create_message(self, message):
