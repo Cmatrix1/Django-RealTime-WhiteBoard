@@ -322,6 +322,9 @@ body {
 }
 
 @media screen and (max-width: 576px) {
+	.big-box {
+		height: 80%;
+	}
 	.fab {
 		display: flex !important;
 		flex-direction: row;
