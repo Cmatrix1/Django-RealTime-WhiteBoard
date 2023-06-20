@@ -44,4 +44,17 @@ $(() => {
 		$('#fabMenu').toggle()
 		$('#fabChat i').toggleClass('fa-close fa-comment')
 	})
+	/**
+	 *This line starts an event listener that listens for a click on the element with the fabMenu
+	 * 1- toggles the element with the ID smallMenu, causing it to either show or hide over a duration of 1000ms.
+	 * 2- toggles the class position-absolute on all elements with the class fab.
+	 * 3- toggles the display of the element with the ID fabChat.
+	 * 4- Finally, toggles the classes fa-close and fa-comment on the icon inside the element with the ID fabMenu.
+	 */
+	$('#fabMenu').click(function () {
+		$('#smallMenu').toggle(1000)
+		$('.fab').toggleClass('position-absolute')
+		$('#fabChat').toggle()
+		$('#fabMenu i').toggleClass('fa-close fa-comment')
+	})
 })
