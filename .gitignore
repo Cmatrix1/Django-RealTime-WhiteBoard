@@ -12,6 +12,7 @@ media/
 venv/
 env/
 .venv/
+.vscode
 
 # Ignore compiled Python files
 whiteboard/migrations/
