@@ -66,10 +66,11 @@ class MessageConsumer(AsyncWebsocketConsumer):
 
 
     async def chat_message(self, event):
-        await self.send(text_data=json.dumps({
-            'message': event['message'],
-            'username': event['username']
-        }))
+        if not self.user.name == event['username']:
+            await self.send(text_data=json.dumps({
+                'message': event['message'],
+                'username': event['username']
+            }))
 
 
     # Write method for validation of sender name
