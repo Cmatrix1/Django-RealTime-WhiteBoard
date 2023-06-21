@@ -3,7 +3,7 @@ from rest_framework.permissions import BasePermission
 from whiteboard.models import ConferenceRoom, Participant
 
 
-class IsUserInConfrence(BasePermission):
+class IsUserInConference(BasePermission):
     def has_permission(self, request, view):
         if view.room.is_participant(request.user):
             return True
