@@ -20,19 +20,28 @@ class WhiteBoardView(TemplateView):
     template_name = "whiteboard/whiteboard.html"
 
 
+# class Conference(View):
+#     def dispatch(self, request, slug):
+#         self.room = get_object_or_404(ConferenceRoom, slug=slug)
+#         return super().dispatch(request, slug)
+    
+#     def get(self, request: HttpRequest, slug: str):
+#         return render(request, "whiteboard/login_confrence.html", context={"room": self.room})
+        
+#     def post(self, request: HttpRequest, slug: str):
+#         # Should Get User Here With Authenticate methods
+#         # And Create Member 
+#         return render(request, "whiteboard/confrence.html")
+    
+
 class Conference(View):
     def dispatch(self, request, slug):
         self.room = get_object_or_404(ConferenceRoom, slug=slug)
         return super().dispatch(request, slug)
     
     def get(self, request: HttpRequest, slug: str):
-        return render(request, "whiteboard/login_confrence.html", context={"room": self.room})
-        
-    def post(self, request: HttpRequest, slug: str):
-        # Should Get User Here With Authenticate methods
-        # And Create Member 
-        return render(request, "whiteboard/confrence.html")
-    
+        return render(request, "whiteboard/confrence.html", context={"room": self.room})
+
 
 
 class ConferenceRoomMessagesAPI(APIView):
