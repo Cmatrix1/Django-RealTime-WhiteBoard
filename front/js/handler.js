@@ -32,6 +32,40 @@ $(() => {
 	}
 
 	/**
+	 * When the width of the window is less than 576 pixels,
+	 * the code hides the "#rightBox" element and sets its position to absolute with
+	 * a width and height of 100%. This is likely intended to make the element take up
+	 * the full width of the screen on smaller devices.
+	 *
+	 * When the window width is greater than or equal to 576 pixels,
+	 * the code shows the "#rightBox" element and sets its position to static with
+	 * a width of 25% minus 20 pixels and a height of 100%. This is likely intended to make
+	 * the element take up a fixed portion of the screen on larger devices.
+	 */
+
+	$(window).on('resize', function () {
+		let win = $(this)
+		console.log(win.width())
+		if (win.width() < 576) {
+			$('#rightBox').hide()
+			$('#rightBox').css({
+				position: 'absolute',
+				width: '100%',
+				hight: '100%',
+			})
+		} else {
+			$('#rightBox').show()
+			$('#rightBox').css({
+				position: 'static',
+				width: 'calc(25% - 20px)',
+				hight: '100%',
+			})
+		}
+	})
+
+	// FIXME: Below buttons need fix to some resolution
+
+	/**
 	 *This line starts an event listener that listens for a click on the element with the ID fabChat
 	 * 1- toggles the element with the ID rightBox, causing it to either show or hide over a duration of 1000ms.
 	 * 2- toggles the class position-absolute on all elements with the class fab.
