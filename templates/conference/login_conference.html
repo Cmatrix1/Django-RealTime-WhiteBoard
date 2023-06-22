@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Conference</title>
+  <link rel="stylesheet" href="{% static 'login/style.css' %}">
+</head>
+<body>
+<div class="wrapper">
+      <div class="title-text">
+        <div class="title login">Login as User</div>
+        <div class="title signup">Login as Guest</div>
+      </div>
+      <div class="form-container">
+        {% if room.allow_anonymous %}
+          <div class="slide-controls">
+            <input type="radio" name="slide" id="login" checked>
+            <input type="radio" name="slide" id="signup">
+            <label for="login" class="slide login">Login</label>
+            <label for="signup" class="slide signup">Guest</label>
+            <div class="slider-tab"></div>
+          </div>
+        {% endif %}
+        <div class="form-inner">
+          <form action="#" class="login">
+            <pre>
+            </pre>
+            <div class="field">
+              {{user_form.username}}
+            </div>
+            <div class="field">
+              {{user_form.password}}
+            </div>
+            <div class="pass-link"><a href="#">Forgot password?</a></div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Login">
+            </div>
+            <!-- <div class="signup-link">Create an account <a href="">Signup now</a></div> -->
+          </form>
+          <form action="#" class="signup">
+            <div class="field">
+              {{guest_form.display_name}}
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Login">
+            </div>
+            <!-- <div class="signup-link">Already have an account? <a href="">Login</a></div> -->
+          </form>
+        </div>
+      </div>
+    </div>
+  <script  src="{% static 'login/script.js' %}"></script>
+
+</body>
+</html>
