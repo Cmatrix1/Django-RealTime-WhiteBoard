@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 :root {
 	--primary: oklch(23% 0.006 301.06);
 	--primary-60: oklch(23% 0.006 301.06 / 60%);
@@ -14,8 +15,9 @@ body {
 }
 html,
 body {
+	font-family: 'Poppins', sans-serif;
 	height: 100vh;
-	font-size: 16px;
+	font-size: 15px;
 }
 
 .preload {
@@ -322,6 +324,9 @@ body {
 }
 
 @media screen and (max-width: 576px) {
+	.big-box {
+		height: 80%;
+	}
 	.fab {
 		display: flex !important;
 		flex-direction: row;
