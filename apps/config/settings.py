@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
 
-    # 'whiteboard',
     'conference',
     'message',
     'board',
