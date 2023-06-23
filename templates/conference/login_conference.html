@@ -24,9 +24,10 @@
           </div>
         {% endif %}
         <div class="form-inner">
-          <form action="#" class="login">
+          <form method="post" enctype="multipart/form-data" class="login">
             <pre>
             </pre>
+            {% csrf_token %}
             <div class="field">
               {{user_form.username}}
             </div>
@@ -40,7 +41,8 @@
             </div>
             <!-- <div class="signup-link">Create an account <a href="">Signup now</a></div> -->
           </form>
-          <form action="#" class="signup">
+          <form method="post" enctype="multipart/form-data" class="signup">
+            {% csrf_token %}
             <div class="field">
               {{guest_form.display_name}}
             </div>
