@@ -10,7 +10,8 @@ class MessageConsumer(AsyncWebsocketConsumer):
         self.room_name = self.scope['url_route']['kwargs']['slug']
         self.room_group_name = f'chat_{self.room_name}'
         self.user = self.scope['user']
-
+        self.participant = await self.get_participant()
+        
         await self.channel_layer.group_add(
             self.room_group_name,
             self.channel_name
@@ -19,6 +20,7 @@ class MessageConsumer(AsyncWebsocketConsumer):
         await self.accept()
 
     async def disconnect(self, close_code):
+        await self.delete_participant()
         await self.channel_layer.group_discard(
             self.room_group_name,
             self.channel_name
@@ -35,23 +37,27 @@ class MessageConsumer(AsyncWebsocketConsumer):
             {
                 'type': 'chat_message',
                 'message': message,
-                'username': self.user.username
+                'username': self.participant.name
             }
         )
 
 
     async def chat_message(self, event):
-        if not self.user.name == event['username']:
+        if not self.participant.name == event['username']:
             await self.send(text_data=json.dumps({
                 'message': event['message'],
                 'username': event['username']
             }))
 
-
-    # Write method for validation of sender name
-
     @database_sync_to_async
     def create_message(self, message):
-        # Could Be better
-        participant = Participant.objects.get(user=self.user, room__slug=self.room_name)
-        Message.objects.create(sender=participant, room=participant.room, content=message)
+        Message.objects.create(sender=self.participant, room=self.participant.room, content=message)
+
+    @database_sync_to_async
+    def get_participant(self):
+        participant_id = self.scope['session'].get("participant_id")
+        return Participant.objects.get(id=participant_id)
+
+    @database_sync_to_async
+    def delete_participant(self):
+        return self.participant.delete()
