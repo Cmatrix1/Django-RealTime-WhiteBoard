@@ -1,30 +1,29 @@
 const chatBox = document.getElementById('chat-box');
 const messageInp = document.getElementById('message-input');
 const username = document.getElementById('username');
-// for test
-const roomSlug = "test";
+
 let chatSocket;
 
 function handleOnMessage(e) {
   const data = JSON.parse(e.data);
-  console.log("OnMessage Run !", data);
-
-  const { sender, content, created_at } = data;
-
-  // Add the message to the chat box
+  const { username, message } = data;
   const options = { hour: 'numeric', minute: 'numeric' };
   const messageHTML = `
   <div class="message">
     <div class="message-header">
-      <div class="author">${sender}</div>
-      <div class="date">${new Date(created_at).toLocaleTimeString('en-US', options)}</div>
+      <div class="author">${username}</div>
+      <div class="date">${new Date().toLocaleTimeString('en-US', options)}</div>
     </div>
     <div class="message-body small">
-      <p>${content}</p>
+      <p>${message}</p>
     </div>
   </div>
 `;
   chatBox.innerHTML += messageHTML;
+  chatBox.scroll({
+    top: chatBox.scrollHeight,
+    behavior: 'smooth'
+  });
 };
 
 function connectWebSocket() {
