@@ -1,17 +1,16 @@
 function getWebsiteURLWithPort() {
-    // const { protocol, hostname, port } = window.location;
-    // return `${protocol}//${hostname}${port ? `:${port}` : ""}`;
-    return 'http://127.0.0.1:8000'
+  const { protocol, hostname, port } = window.location;
+  return `${protocol}//${hostname}${port ? `:${port}` : ""}`;
 }
 
 async function fetchMessages(roomName) {
-    const response = await fetch(`${getWebsiteURLWithPort()}/api/${roomName}/messages/`);
-    const messages = await response.json();
+  const response = await fetch(`${getWebsiteURLWithPort()}/api/${roomName}/messages/`);
+  const messages = await response.json();
 
-    const chatBox = document.getElementById('chat-box');
-    const options = { hour: 'numeric', minute: 'numeric' };
-    const messageHtmls = messages.map(({ sender, created_at, content }) => `
-      <div class="message">
+  const chatBox = document.getElementById('chat-box');
+  const options = { hour: 'numeric', minute: 'numeric' };
+  const messageHtmls = messages.map(({ sender, created_at, content }) => `
+      <div class="${username.innerText !== sender ? "message" : "user-message"}">
         <div class="message-header">
           <div class="author">${sender}</div>
           <div class="date">${new Date(created_at).toLocaleTimeString('en-US', options)}</div>
@@ -21,7 +20,7 @@ async function fetchMessages(roomName) {
         </div>
       </div>
     `);
-    chatBox.innerHTML += messageHtmls.join('');
+  chatBox.innerHTML += messageHtmls.join('');
 }
 
 fetchMessages("test")
