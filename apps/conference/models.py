@@ -28,4 +28,4 @@ class Participant(models.Model):
     joined_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return "{} - {}".format(self.user.username, self.room.name)
+        return "{} - {}".format(self.name, self.room.name)
