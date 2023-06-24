@@ -1,3 +1,4 @@
+let image = document.querySelector('.board-img')
 
 function connectWebSocket() {
     chatSocket = new WebSocket(

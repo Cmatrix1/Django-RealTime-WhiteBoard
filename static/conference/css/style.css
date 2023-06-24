@@ -371,3 +371,9 @@ body {
 		height: 100vh;
 	}
 }
+
+
+.board-img{
+    border-radius: 10px;
+    background-color: white;
+}

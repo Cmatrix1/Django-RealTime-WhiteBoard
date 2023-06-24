@@ -142,7 +142,8 @@ body {
 }
 
 .big-box {
-	background-color: var(--primary-light);
+	/* background-color: var(--primary-light); */
+	background-color: #fff;
 	border-radius: 10px;
 	height: clamp(10rem, 70%, 100%);
 	align-self: flex-end;
