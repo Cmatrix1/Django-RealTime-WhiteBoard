@@ -71,11 +71,8 @@
 					<!-- BoxHeader -->
 					<div class="d-flex flex-row small-boxes py-0">
 						<div class="small-box user-img position-relative">
-							<img
-								src="{% static 'conference/img/user-1.jpg' %}"
-								alt=""
-								class="user-photo"
-							/>
+							<video id="my-videoBox" class="user-photo" autoplay></video>
+							
 							<div class="usr-img-bottom">
 								<div class="w-100 usr-img-bottom-btn">
 									<i class="fas fa-volume-up"></i>
@@ -143,10 +140,12 @@
 					</div>
 					<!-- BoxMasterView -->
 					<div class="big-box w-100">
-						<div
-							class="board"
-							id="app"
-						></div>
+						{% if is_admin %}
+							<div class="board" id="app"></div>
+						{% else %}
+							<img src="" class="board-img board" alt="">
+						{% endif %}
+						
 					</div>
 					<!-- Buttons start -->
 					<div class="d-none d-md-flex flex-row w-100">
@@ -312,8 +311,20 @@ var roomSlug = "{{room.name}}";
 
 		<!-- Link to Script Js -->
 		<script src="{% static 'conference/js/script.js' %}"></script>
+
+		<!-- Link to Messages Js -->
 		<script src="{% static 'conference/js/message/message.js' %}"></script>
 		<script src="{% static 'conference/js/message/websocket.js' %}"></script>
+
+		<!-- Link to Board Js -->
+		{% if is_admin %}
+			<script src="{% static 'conference/js/board/adminSocket.js' %}"></script>
+		{% else %}
+			<script src="{% static 'conference/js/board/userSocket.js' %}"></script>
+		{% endif %}
+
+		<!-- Link to WebRTC Js -->
+		<script src="{% static 'conference/js/webrtc/webrtc.js' %}"></script>
 
 		<!-- ChatButton and MenuButton Handler -->
 		<script src="{% static 'conference/js/handler.js' %}"></script>
