@@ -38,7 +38,7 @@ class Conference(View):
             participant = Participant.objects.get_or_create(name=display_name, room=self.room, session=self.session)[0]
             request.session['display_name'] = display_name
             request.session['participant_id'] = participant.id
-            return render(request, self.conference_template_name, {"room":self.room, "participant":participant})
+            return render(request, self.conference_template_name, {"room":self.room, "participant":participant, "is_admin":self.room.is_admin(request.user)})
         
         elif user_form.is_valid():
             username = user_form.cleaned_data['username']
@@ -48,7 +48,7 @@ class Conference(View):
                 login(request, user)
                 participant = Participant.objects.create(name=username, user=user, room=self.room, session=self.session)
                 request.session['participant_id'] = participant.id
-                return render(request, self.conference_template_name, {"room":self.room, "participant":participant})
+                return render(request, self.conference_template_name, {"room":self.room, "participant":participant, "is_admin":self.room.is_admin(request.user)})
             else:
                 user_form.add_error(None, 'Invalid username or password')
 

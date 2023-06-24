@@ -19,6 +19,8 @@ class ConferenceRoom(models.Model):
             return True
         return self.participants.filter(id=user.id).exists()
 
+    def is_admin(self, user: User):
+        return self.admin == user
 
 class Participant(models.Model):
     name = models.CharField(max_length=50, null=True, blank=True)
