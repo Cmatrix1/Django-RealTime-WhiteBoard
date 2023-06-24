@@ -3,5 +3,5 @@ from django.urls import path, re_path
 from board import consumers
 
 websocket_urlpatterns = [
-    path('ws/board/', consumers.BoardConsumer.as_asgi()),
+    re_path(r'ws/board/(?P<slug>[\w-]+)/$', consumers.BoardConsumer.as_asgi()),
 ]
