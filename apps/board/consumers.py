@@ -33,7 +33,7 @@ class BoardConsumer(AsyncWebsocketConsumer):
             },
         )
         else:
-            await self.disconnect()
+            await self.disconnect(close_code=403)
 
 
     async def broadcast_message(self, event):

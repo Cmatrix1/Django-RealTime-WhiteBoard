@@ -1,6 +1,5 @@
 from django.http import HttpRequest
 from django.shortcuts import render, get_object_or_404
-from django.contrib.sessions.models import Session
 from django.contrib.auth import authenticate, login
 from django.views import View
 
@@ -31,11 +30,11 @@ class Conference(View):
     def post(self, request: HttpRequest, slug: str):
         guest_form = GuestLoginForm(request.POST)
         user_form = UserLoginForm(request.POST)
-        self.session = Session.objects.get(session_key=request.session.session_key)
+        session = request.session.session_key
 
         if guest_form.is_valid() and not user_form.is_valid():
             display_name = guest_form.cleaned_data['display_name']
-            participant = Participant.objects.get_or_create(name=display_name, room=self.room, session=self.session)[0]
+            participant = Participant.objects.get_or_create(name=display_name, room=self.room, session=session)[0]
             request.session['display_name'] = display_name
             request.session['participant_id'] = participant.id
             return render(request, self.conference_template_name, {"room":self.room, "participant":participant, "is_admin":self.room.is_admin(request.user)})
@@ -46,7 +45,7 @@ class Conference(View):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                participant = Participant.objects.create(name=username, user=user, room=self.room, session=self.session)
+                participant = Participant.objects.create(name=username, user=user, room=self.room, session=session)
                 request.session['participant_id'] = participant.id
                 return render(request, self.conference_template_name, {"room":self.room, "participant":participant, "is_admin":self.room.is_admin(request.user)})
             else:
