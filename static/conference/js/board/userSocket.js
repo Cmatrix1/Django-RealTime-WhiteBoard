@@ -1,21 +1,21 @@
 let image = document.querySelector('.board-img')
 
 function connectWebSocket() {
-    chatSocket = new WebSocket(
+    boardSocket = new WebSocket(
       getWebSocketAddress() +
       '/ws/board/' + roomSlug + '/'
     );
-    chatSocket.onopen = function () {
+    boardSocket.onopen = function () {
       console.log('Board Socket connected!');
     };
 
-    chatSocket.onmessage = (event) => {
+    boardSocket.onmessage = (event) => {
         const data = JSON.parse(event.data);
         image.src = data.imageData;
         console.log("Board Socket Recive !");
     };
 
-    chatSocket.onclose = function () {
+    boardSocket.onclose = function () {
       console.log('Board Socket closed, retrying in 5 seconds...');
       setTimeout(connectWebSocket, 5000);
     };

@@ -17,15 +17,15 @@ const root = ReactDOM.createRoot(excalidrawWrapper);
 root.render(React.createElement(App));
 
 function connectWebSocket() {
-  chatSocket = new WebSocket(
+  boardSocket = new WebSocket(
     getWebSocketAddress() +
     '/ws/board/' + roomSlug + '/'
   );
-  chatSocket.onopen = function () {
+  boardSocket.onopen = function () {
     console.log('Board Socket connected!');
   };
 
-  chatSocket.onclose = function () {
+  boardSocket.onclose = function () {
     console.log('Board Socket closed, retrying in 5 seconds...');
     setTimeout(connectWebSocket, 5000);
   };
@@ -34,7 +34,7 @@ function connectWebSocket() {
 function sendCanvas(canvas) {
   const imageData = canvas.toDataURL();
   const message = { imageData: imageData };
-  chatSocket.send(JSON.stringify(message));
+  boardSocket.send(JSON.stringify(message));
 }
 
 
