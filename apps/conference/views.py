@@ -37,7 +37,7 @@ class Conference(View):
             participant = Participant.objects.get_or_create(name=display_name, room=self.room, session=session)[0]
             request.session['display_name'] = display_name
             request.session['participant_id'] = participant.id
-            return render(request, self.conference_template_name, {"room":self.room, "participant":participant, "is_admin":self.room.is_admin(request.user)})
+            return render(request, self.conference_template_name, {"room":self.room, "participant":participant, "is_admin":False})
         
         elif user_form.is_valid():
             username = user_form.cleaned_data['username']
