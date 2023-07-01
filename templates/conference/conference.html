@@ -70,7 +70,8 @@
 				>
 					<!-- BoxHeader -->
 					<div class="d-flex flex-row small-boxes py-0">
-						<div class="small-box user-img position-relative">
+
+						<div class="small-box user-img position-relative"  style="width:22%;">
 							<video id="my-videoBox" class="user-photo" autoplay></video>
 							
 							<div class="usr-img-bottom">
@@ -85,7 +86,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="small-box user-image position-relative">
+						{% comment %} <div class="small-box user-image position-relative">
 							<img
 								src="{% static 'conference/img/user-2.jpg' %}"
 								alt=""
@@ -136,7 +137,7 @@
 								</div>
 								<div class="w-100 text-right">Leila</div>
 							</div>
-						</div>
+						</div> {% endcomment %}
 					</div>
 					<!-- BoxMasterView -->
 					<div class="big-box w-100">
@@ -332,8 +333,8 @@ var roomSlug = "{{room.name}}";
 		{% endif %}
 
 		<!-- Link to WebRTC Js -->
-		{% comment %} <script src="{% static 'conference/js/webrtc/webrtc.js' %}"></script>
-		<script src="{% static 'conference/js/webrtc/socket.js' %}"></script> {% endcomment %}
+		<script src="{% static 'conference/js/webrtc/webrtc.js' %}"></script>
+		{% comment %} <script src="{% static 'conference/js/webrtc/socket.js' %}"></script> {% endcomment %}
 
 		<!-- ChatButton and MenuButton Handler -->
 		<script src="{% static 'conference/js/handler.js' %}"></script>

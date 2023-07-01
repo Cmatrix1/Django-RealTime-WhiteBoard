@@ -14,10 +14,11 @@ function saveCanvasImage() {
         contentType: false,
         cache: false,
         success: function (data) {
-          console.log('Image saved:', data.file_path);
+          showNotification('Image Saved: '+ data.file_path)
         },
         error: function (jqXHR, textStatus, errorThrown) {
           console.error(errorThrown);
+          showNotification('Error In Saving The Board !')
         }
       });
     });

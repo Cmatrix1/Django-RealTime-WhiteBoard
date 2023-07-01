@@ -25,5 +25,5 @@ const showNotification = (t) => {
 	notification.classList.add('show')
 	setTimeout(() => {
 		notification.classList.remove('show')
-	}, 5000)
+	}, 2500)
 }

@@ -43,10 +43,7 @@ class MessageConsumer(AsyncWebsocketConsumer):
 
     async def chat_message(self, event):
         if not self.participant.name == event['username']:
-            await self.send(text_data=json.dumps({
-                'message': event['message'],
-                'username': event['username']
-            }))
+            await self.send(text_data=json.dumps(event))
 
     @database_sync_to_async
     def create_message(self, message):

@@ -1,16 +1,16 @@
 
 light mode
-delete the header   tr
+delete the header 
 online small boxes      tr
 the admin user should Choice    tr
 the teacher user can block some users in page   tr
 the teacher can take photo from board # Done
 join message    tr
 leave message   tr
-show the test camera    tr
+show the test camera    # Done
 Dynamic chatbox
-handle the when the teacher left all message deleted and close the room     tr
-check authenticate in messages      tr
+handle the when the teacher left all message deleted and close the room   tr
+check authenticate in messages    tr
 
 
 
