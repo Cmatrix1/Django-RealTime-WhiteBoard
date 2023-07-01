@@ -45,7 +45,6 @@ $(() => {
 
 	$(window).on('resize', function () {
 		let win = $(this)
-		console.log(win.width())
 		if (win.width() < 576) {
 			$('#rightBox').hide()
 			$('#rightBox').css({
@@ -62,8 +61,6 @@ $(() => {
 			})
 		}
 	})
-
-	// FIXME: Below buttons need fix to some resolution
 
 	/**
 	 *This line starts an event listener that listens for a click on the element with the ID fabChat
