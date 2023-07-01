@@ -1,8 +1,19 @@
+
 light mode
-the admin user should Choice
+delete the header   tr
+online small boxes      tr
+the admin user should Choice    tr
+the teacher user can block some users in page   tr
+the teacher can take photo from board # Done
+join message    tr
+leave message   tr
+show the test camera    tr
 Dynamic chatbox
+handle the when the teacher left all message deleted and close the room     tr
+check authenticate in messages      tr
+
+
 
 WebRTC Course 1day
-Write Hints 1h
-3 Deep Dive 2h
-Refactor 2h
+Write Hints 1h # Done
+Refactor 2h # Done

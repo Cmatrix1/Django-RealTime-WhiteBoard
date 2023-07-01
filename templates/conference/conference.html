@@ -164,7 +164,7 @@
 							<div class="button icon mx-1">
 								<i class="fas fa-duotone fa-video"></i>
 							</div>
-							<div class="button icon mx-1">
+							<div id="upload-board" class="button icon mx-1">
 								<i class="fas fa-duotone fa-cloud-upload"></i>
 							</div>
 							<div class="button icon mx-1 bg-primary">
@@ -264,7 +264,7 @@
 						<div class="button icon my-1">
 							<i class="fas fa-duotone fa-video"></i>
 						</div>
-						<div class="button icon my-1">
+						<div id="upload-board" class="button icon my-1">
 							<i class="fas fa-duotone fa-cloud-upload"></i>
 						</div>
 						<div class="button icon my-1 bg-primary">
@@ -319,13 +319,14 @@ var roomSlug = "{{room.name}}";
 		<!-- Link to Board Js -->
 		{% if is_admin %}
 			<script src="{% static 'conference/js/board/adminSocket.js' %}"></script>
+			<script src="{% static 'conference/js/board/upload.js' %}"></script>
 		{% else %}
 			<script src="{% static 'conference/js/board/userSocket.js' %}"></script>
 		{% endif %}
 
 		<!-- Link to WebRTC Js -->
-		<script src="{% static 'conference/js/webrtc/webrtc.js' %}"></script>
-		<script src="{% static 'conference/js/webrtc/socket.js' %}"></script>
+		{% comment %} <script src="{% static 'conference/js/webrtc/webrtc.js' %}"></script>
+		<script src="{% static 'conference/js/webrtc/socket.js' %}"></script> {% endcomment %}
 
 		<!-- ChatButton and MenuButton Handler -->
 		<script src="{% static 'conference/js/handler.js' %}"></script>
