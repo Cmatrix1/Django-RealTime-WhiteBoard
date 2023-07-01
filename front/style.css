@@ -317,11 +317,9 @@ body {
 	background: var(--primary-light);
 }
 
-.fab {
-	display: none;
-}
-
-.menu-sm {
+.fab,
+.menu-sm,
+.fab-chat .fab-menu {
 	display: none;
 }
 

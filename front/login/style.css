@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 :root {
 	--primary: oklch(23% 0.006 301.06);
-	--primary-60: oklch(23% 0.006 301.06 / 60%);
 	--primary-light: oklch(26.3% 0.006 301.06);
 	--accent: oklch(54.2% 0.23 271.06);
 	--accent-dark: oklch(43.2% 0.23 271.06);
@@ -68,7 +67,7 @@ body {
 	overflow: hidden;
 	margin: 30px 0 10px 0;
 	justify-content: space-between;
-	border: 1px solid #333;
+	border: 1px solid var(--gray);
 	border-radius: 15px;
 }
 
