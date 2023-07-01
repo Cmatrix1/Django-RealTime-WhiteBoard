@@ -317,11 +317,35 @@ body {
 	background: var(--primary-light);
 }
 
-.fab {
-	display: none;
+.notification {
+	position: absolute;
+	padding: 1rem 1rem;
+	color: var(--white);
+	bottom: 1rem;
+	left: 1rem;
+	visibility: hidden;
+}
+.notification.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 5s;
+}
+.notification-body {
+	padding: 0.5rem 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: center;
+	background-color: var(--accent-dark);
+	border-radius: 10px;
+}
+.notification-body > * {
+	margin-left: 0.5rem;
 }
 
-.menu-sm {
+.fab,
+.menu-sm,
+.fab-chat .fab-menu {
 	display: none;
 }
 
@@ -371,5 +395,46 @@ body {
 		border: 1px solid rgba(255, 255, 255, 0.18);
 		width: 100vw;
 		height: 100vh;
+	}
+}
+
+@keyframes fadein {
+	from {
+		bottom: 0;
+		opacity: 0;
+	}
+	to {
+		bottom: 1rem;
+		opacity: 1;
+	}
+}
+@keyframes fadeout {
+	from {
+		bottom: 1rem;
+		opacity: 1;
+	}
+	to {
+		bottom: 0;
+		opacity: 0;
+	}
+}
+@-webkit-keyframes fadein {
+	from {
+		bottom: 0;
+		opacity: 0;
+	}
+	to {
+		bottom: 1rem;
+		opacity: 1;
+	}
+}
+@-webkit-keyframes fadeout {
+	from {
+		bottom: 1rem;
+		opacity: 1;
+	}
+	to {
+		bottom: 0;
+		opacity: 0;
 	}
 }
