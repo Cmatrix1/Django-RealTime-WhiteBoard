@@ -378,3 +378,126 @@ body {
     border-radius: 10px;
     background-color: white;
 }
+
+
+.notification {
+	position: absolute;
+	padding: 1rem 1rem;
+	color: var(--white);
+	bottom: 1rem;
+	left: 1rem;
+	visibility: hidden;
+}
+.notification.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 5s;
+}
+.notification-body {
+	padding: 0.5rem 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: center;
+	background-color: var(--accent-dark);
+	border-radius: 10px;
+}
+.notification-body > * {
+	margin-left: 0.5rem;
+}
+
+.fab,
+.menu-sm,
+.fab-chat .fab-menu {
+	display: none;
+}
+
+@media screen and (max-width: 576px) {
+	.big-box {
+		height: 80%;
+	}
+	.fab {
+		display: flex !important;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: auto;
+		padding: 1rem 1.5rem;
+		z-index: 9;
+	}
+
+	.fab-menu i {
+		font-size: 1rem;
+		color: var(--white);
+		background-color: var(--primary-light);
+		border-radius: 5rem;
+		padding: 1rem;
+	}
+
+	.fab-chat i {
+		font-size: 1rem;
+		color: var(--white);
+		background-color: var(--primary-light);
+		border-radius: 5rem;
+		padding: 1rem;
+	}
+	.menu-sm {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 8;
+		background: var(--primary-60);
+		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+		backdrop-filter: blur(11.5px);
+		-webkit-backdrop-filter: blur(11.5px);
+		border-radius: 10px;
+		border: 1px solid rgba(255, 255, 255, 0.18);
+		width: 100vw;
+		height: 100vh;
+	}
+}
+
+@keyframes fadein {
+	from {
+		bottom: 0;
+		opacity: 0;
+	}
+	to {
+		bottom: 1rem;
+		opacity: 1;
+	}
+}
+@keyframes fadeout {
+	from {
+		bottom: 1rem;
+		opacity: 1;
+	}
+	to {
+		bottom: 0;
+		opacity: 0;
+	}
+}
+@-webkit-keyframes fadein {
+	from {
+		bottom: 0;
+		opacity: 0;
+	}
+	to {
+		bottom: 1rem;
+		opacity: 1;
+	}
+}
+@-webkit-keyframes fadeout {
+	from {
+		bottom: 1rem;
+		opacity: 1;
+	}
+	to {
+		bottom: 0;
+		opacity: 0;
+	}
+}

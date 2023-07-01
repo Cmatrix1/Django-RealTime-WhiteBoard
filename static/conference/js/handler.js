@@ -45,7 +45,6 @@ $(() => {
 
 	$(window).on('resize', function () {
 		let win = $(this)
-		console.log(win.width())
 		if (win.width() < 576) {
 			$('#rightBox').hide()
 			$('#rightBox').css({
